@@ -1,10 +1,4 @@
-var stopWatch = [
-  {
-    isStarted: false,
-    timeElapsed: 0,
-    timeLimit: 10
-  }
-]
+
 
 function renderStopWatch(stopWatch) {
   var newDiv = document.createElement('div')
@@ -22,6 +16,7 @@ function renderStopWatch(stopWatch) {
     newHeader.textContent = stopWatch.timeElapsed
   }
   var newButton = document.createElement('button')
+  var isExpired = stopWatch.timeElapsed >= stopWatch.stopTimeLimit
   if (!stopWatch.isStarted && stopWatch.timeElapsed === 10) {
     newButton.textContent = 'Reset'
   }
