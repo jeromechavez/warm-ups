@@ -18,10 +18,10 @@ function ransomeCase(string) {
   var newString = ''
   for (var i = 0; i < string.length; i++) {
     if (i % 2 === 0) {
-      newString += string.charAt(i).toUpperCase(i)
+      newString += string[i].toUpperCase(i)
     }
     else {
-      newString += string.charAt(i)
+      newString += string[i]
     }
   }
   return newString
@@ -30,7 +30,7 @@ function ransomeCase(string) {
 function reverse(string) {
   var reversedString = ''
   for (var i = 0; i < string.length; i++) {
-    reversedString += string.charAt(string.length - 1 - i)
+    reversedString += string[string.length - 1 - i]
   }
   return reversedString
 }
@@ -39,10 +39,10 @@ function capitalize(string) {
   var newString = ''
   for (var i = 0; i < string.length; i++) {
     if (i === 0) {
-      newString += string.charAt(i).toUpperCase(i)
+      newString += string[i].toUpperCase(i)
     }
     else {
-      newString += string.charAt(i).toLowerCase(i)
+      newString += string[i].toLowerCase(i)
     }
   }
   return newString
