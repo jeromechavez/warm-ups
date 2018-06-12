@@ -9,7 +9,7 @@ function startsWith(string, substring) {
 
 function endsWith(string, substring) {
   for (var i = 0; i < substring.length; i++) {
-    if (string[string.length-1-i] !== substring[substring.length - 1 -i]) {
+    if (string[string.length - 1 - i] !== substring[substring.length - 1 - i]) {
       return false
     }
   }
