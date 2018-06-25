@@ -11,7 +11,7 @@ function createCollection() {
       return item
     },
     findById(id) {
-      let found = items.find(function(obj) {
+      let found = items.find((obj) => {
         return obj.id === id
       })
       if (!found) return null
@@ -20,7 +20,7 @@ function createCollection() {
     updateById(id, updates) {
       let key = Object.keys(updates)
       let value = Object.values(updates)
-      let found = items.find(function(obj) {
+      let found = items.find((obj) => {
         return obj.id === id
       })
       if (!found) return null
@@ -35,14 +35,14 @@ function createCollection() {
         return items
       }
       else {
-        let filtered = items.filter(function (item) {
+        let filtered = items.filter((item) => {
           return item[key[0]] === query[key[0]]
         })
         return filtered
       }
     },
     deleteById(id) {
-      let found = items.find(function(obj) {
+      let found = items.find((obj) => {
         return obj.id === id
       })
       if (!found) return null
